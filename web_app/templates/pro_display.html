@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+     <style>
+        body{
+    background-image:url({% static 'sph.jpg'%});
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    height:2500px;
+    margin: 10px;
+    }
+     img:hover{
+        transform: scale(1.12);
+    }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<u style="color:white;"><h1 style="font-family:'Times New Roman', Times, serif;text-align: center;">ADDED PRODUCTS</h1></u>
+<div class="row">
+    {% for i,j,k,l,m,n in a %}
+    <div class="col-3">
+        <div class="card" style="width:217px;height:400px;background-color:rgb(164, 104, 59);margin-top:10px;margin-left:55px;">
+            <img src="{% static m %}" class="card-img-top" alt="..." style="height:150px;width:217px;margin-top:-1px;margin-left:-1px;">
+            <div class="card-body">
+                <h5 class="card-title">{{i}}</h5>
+                <p class="card-text">{{j}}</p>
+                <p>{{k}}</p>
+                <p>{{l}}</p>
+                <a href="http://127.0.0.1:8000/web_app/pro_edit/{{n}}" class="btn btn-light">Edit</a>
+                <a href="http://127.0.0.1:8000/web_app/pro_del/{{n}}" class="btn btn-light">Delete</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+         .bg{
+      background-image:url({% static 'slide1.jpg' %});
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:cover;
+      position:relative;
+      height:600px;
+      margin: 10px;
+    }
+    .bg1{
+      background-image:url({% static 'slide4.jpg' %});
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:cover;
+      position:relative;
+      height:600px;
+      margin: 20px;
+    }
+    .bg2{
+      background-image:url({% static 'slide5.jpg' %});
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:cover;
+      position:relative;
+      height:600px;
+      margin: 10px;
+    }
+
+    img:hover{
+        transform: scale(1.12);
+    }
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/39d2f692ec.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="height:100px;background-color:rgb(178, 131, 96);">
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <img src="{% static 'rhythm.png' %}" style="height:80px;width:20%;">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" style="color:black;margin-top:15px;margin-left:500px;">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;margin-top:15px;">
+            Login
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/web_app/log/">User</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/web_app/adminlogin/">Admin</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/web_app/profile/" style="color:black;margin-top:15px;">Profile</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/web_app/cartdisplay/{{a.id}}" style="color:black;margin-top:15px;"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/web_app/wishdisplay/{{a.id}}" style="color:black;margin-top:15px;margin-left:20px;"><i class="fa-solid fa-heart fa-2x"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top:-9px;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="bg">
+        <h1 style="color:white;padding-left:150px;padding-top:80px;">HOT SALES</h1>
+        <h2 style="color:white;padding-left:150px;padding-top:20px;">Flat 30% off on Guitars</h2>
+        <a href="#" class="btn btn-danger" style="margin-left:150px;margin-top:20px;">EMBRACE THE MUSIC WITHIN</a>
+      </div>
+     </div>
+      <div class="carousel-item">
+        <div class="bg1">
+        <h1 style="color:white;font-family: Georgia, 'Times New Roman', Times, serif;padding-top:10px;padding-left:30px;">SALE IS LIVE!!!</h1>
+        <h5 style="color:white;padding-top:10px;padding-left:30px;">Use this code for extra 5% discount</h5>
+        <a href="#" class="btn btn-danger" style="color:white;margin-left:30px;">COUPON:DRUM5</a>
+      </div>
+    </div>
+      <div class="carousel-item">
+        <div class="bg2">
+        <h2 style="color:white;width:23%;padding-top:140px;padding-left:500px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">GRAB YOUR FAVOURITE INSTRUMENTS AT BEST DEALS!!!!</h2>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true">
+        <span class="ti-angle-left slider-icon"></span>
+      </span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true">
+        <span class="ti-angle-right slider-icon"></span>
+      </span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<u><h1 style="font-family:'Times New Roman', Times, serif;text-align: center;">BEST DEALS</h1></u>
+
+<div class="row">
+    {% for i,j,k,l,m,n in a %}
+    <div class="col-3">
+        <div class="card" style="width:215px;height:400px;background-color:rgb(164, 104, 59);margin-top:10px;margin-left:55px;">
+            <img src="{% static m %}" class="card-img-top" alt="..." style="height:150px;width:217px;margin-top:-1px;margin-left:-1px;">
+            <div class="card-body">
+                <h5 class="card-title">{{i}}</h5>
+                <p class="card-text">{{j}}</p>
+                <p>{{k}}</p>
+                <p>{{l}}</p>
+              <a href="http://127.0.0.1:8000/web_app/wish/{{n}}"><i class="fa-solid fa-heart" style="color:red;"></i></a>
+                <a href="http://127.0.0.1:8000/web_app/cart/{{n}}" class="btn btn-light">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<div class="container-fluid" style="height:300px;background-color:rgb(178, 131, 96);margin-top:10px;">
+
+  <div class="row mt-1">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div style="width:100px;height:100px;background-color:rgb(178, 131, 96);margin-top:50px;font-family:cursive;margin-left:100px;">
+        <div>
+          <h4>Rhythm</h4>
+          <p>Who we are</p>
+          <p>How to contact us</p>
+          <p>Terms & conditions</p>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div  style="width:250px;height:100px;background-color:rgb(178, 131, 96);margin-top:50px;font-family:cursive;">
+        <div>
+          <h4>Customer Services</h4>
+          <p>Track your order</p>
+          <p>Payments</p>
+          <p>Returns</p>
+          <p>Cancellations</p>
+          <p>Customer care</p>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div  style="width:100px;height:100px;background-color:rgb(178, 131, 96);margin-top:50px;font-family:cursive;">
+        <div>
+          <h4>Policy</h4>
+          <p>Return policy</p>
+          <p>Sitemap</p>
+          <p>Privacy</p>
+          <p>Security</p>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div  style="width:150px;height:100px;background-color: rgb(178, 131, 96);margin-top:50px;font-family:cursive;">
+        <div>
+          <h4>Follow Us</h4>
+          <p>Facebook</p>
+          <p>Instagram</p>
+          <p>Twitter</p>
+          <p>Pinterest</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+</div>
+
+</body>
+</html>

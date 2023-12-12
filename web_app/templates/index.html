@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+         .bg{
+      background-image:url({% static 'slide1.jpg' %});
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:cover;
+      position:relative;
+      height:600px;
+      margin: 10px;
+    }
+    .bg1{
+      background-image:url({% static 'slide4.jpg' %});
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:cover;
+      position:relative;
+      height:600px;
+      margin: 20px;
+    }
+    .bg2{
+      background-image:url({% static 'slide5.jpg' %});
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:cover;
+      position:relative;
+      height:600px;
+      margin: 10px;
+    }
+
+    img:hover{
+        transform: scale(1.12);
+    }
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/39d2f692ec.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="height:100px;background-color:rgb(178, 131, 96);">
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <img src="{% static 'rhythm.png' %}" style="height:80px;width:20%;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" style="color:black;margin-top:15px;margin-left:800px;">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;margin-top:15px;">
+            Login
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/web_app/log/">User</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/web_app/adminlogin/">Admin</a></li>
+          </ul>
+        </li>
+<!--         <li class="nav-item">-->
+<!--          <a class="nav-link" href="#" style="color:black;margin-top:15px;"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>-->
+<!--        </li>-->
+<!--         <li class="nav-item">-->
+<!--          <a class="nav-link" href="#" style="color:black;margin-top:15px;margin-left:20px;"><i class="fa-solid fa-heart fa-2x"></i></a>-->
+<!--        </li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top:-9px;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="bg">
+        <h1 style="color:white;padding-left:150px;padding-top:80px;">HOT SALES</h1>
+        <h2 style="color:white;padding-left:150px;padding-top:20px;">Flat 30% off on Guitars</h2>
+        <a href="#" class="btn btn-danger" style="margin-left:150px;margin-top:20px;">EMBRACE THE MUSIC WITHIN</a>
+      </div>
+     </div>
+      <div class="carousel-item">
+        <div class="bg1">
+        <h1 style="color:white;font-family: Georgia, 'Times New Roman', Times, serif;padding-top:10px;padding-left:30px;">SALE IS LIVE!!!</h1>
+        <h5 style="color:white;padding-top:10px;padding-left:30px;">Use this code for extra 5% discount</h5>
+        <a href="#" class="btn btn-danger" style="color:white;margin-left:30px;">COUPON:DRUM5</a>
+      </div>
+    </div>
+      <div class="carousel-item">
+        <div class="bg2">
+        <h2 style="color:white;width:23%;padding-top:140px;padding-left:500px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">GRAB YOUR FAVOURITE INSTRUMENTS AT BEST DEALS!!!!</h2>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true">
+        <span class="ti-angle-left slider-icon"></span>
+      </span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true">
+        <span class="ti-angle-right slider-icon"></span>
+      </span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<h1 style="font-family:'Times New Roman', Times, serif;text-align: center;">BEST DEALS</h1>
+
+<div id="a" class="container" style="margin-left:65px;margin-top:50px;">
+        <div class="row mt-1">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+       <div class="card" style="width:200px;height:400px;background-color:rgb(164, 104, 59);">
+        <img src="{% static 'saxo1.jpg' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;margin-right:1px;">
+        <div class="card-body">
+          <h5 class="card-title">SAXOPHONE</h5>
+          <p class="card-text">Saxophone with gold lacquer</p>
+          <p><strong>Rs.16,599</strong></p>
+          <p>33% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'har1.jpg' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-1px;margin-left:-1px;margin-right:1px;">
+        <div class="card-body">
+          <h5 class="card-title">HARMONIUM</h5>
+          <p class="card-text">Harmonium with 42 key,2 reed</p>
+          <p><strong>Rs.8,499</strong></p>
+          <p>58% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color:rgb(164, 104, 59);">
+        <img src="{% static 'mr3.jpg' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">MRIDANGAM</h5>
+          <p class="card-text">Mango wood & brown goat skin on both sides</p>
+          <p><strong>Rs.1,390</strong></p>
+          <p>55% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color:rgb(164, 104, 59);">
+        <img src="{% static 'mand2.jpg' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">MANDOLIN</h5>
+          <p class="card-text">Mandolin with A style,F holes,sunburst</p>
+          <p><strong>Rs.6,499</strong></p>
+          <p>19% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="row mt-2" style="margin-top:1px;">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'hand1.jpeg' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">HANDPAN</h5>
+          <p class="card-text">Hand drum C-key 6 notes</p>
+          <p><strong>Rs.10,999</strong></p>
+          <p>31% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color:rgb(164, 104, 59); ">
+        <img src="{% static 'Tabla3.jpeg' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">TABLA</h5>
+          <p class="card-text">Tabla jodi sets with all accessories</p>
+          <p><strong>Rs.5,299</strong></p>
+          <p>24% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'keyb1.webp' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-2px;">
+        <div class="card-body">
+          <h5 class="card-title">KEYBOARD</h5>
+          <p class="card-text">Portable keywords with piano tones,black</p>
+          <p><strong>Rs.14,400</strong></p>
+          <p>10% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color:rgb(164, 104, 59);">
+        <img src="{% static 'electric guitar.jpg' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-9px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">ELECTRIC GUITAR</h5>
+          <p class="card-text">Travel size-electric guitar,black</p>
+          <p><strong>Rs.10,999</strong></p>
+          <p>10% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="row mt-3" style="margin-top:10px;">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'ekeyb2.jpg' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">KEYBOARD</h5>
+          <p class="card-text">Digital touch sensitive portable keyboard</p>
+          <p><strong>Rs.17,590</strong></p>
+          <p>20% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color:rgb(164, 104, 59);">
+        <img src="{% static 'jazzdrum.jpg' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">DRUMSET</h5>
+          <p class="card-text">jazz drumset with 3 musical drums</p>
+          <p><strong>Rs.1,000</strong></p>
+          <p>41% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'harp2.jpeg' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">HARP</h5>
+          <p class="card-text">Harp 18 Note case music box</p>
+          <p><strong>Rs.11,508</strong></p>
+          <p>39% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color:rgb(164, 104, 59);">
+        <img src="{% static 'mand1.webp' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">MANDOLIN</h5>
+          <p class="card-text">Mandolin-8 string with tuner</p>
+          <p><strong>Rs.8,099</strong></p>
+          <p>23% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="row mt-4">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'tamp1.jpeg' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">TANPURA</h5>
+          <p class="card-text">Tanpura- with mango wood</p>
+          <p><strong>Rs.11,999</strong></p>
+          <p>40% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color:rgb(164, 104, 59);">
+        <img src="{% static 'vio2.jpeg' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">Violin</h5>
+          <p class="card-text">Premier violin-sparkling blue</p>
+          <p><strong>Rs.17,809</strong></p>
+          <p>27% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'acc2.jpg' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">ACCORDION</h5>
+          <p class="card-text">Accordion with 17 keys 8 bass & straps</p>
+          <p><strong>Rs.11,780</strong></p>
+          <p>25% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'djembe1.jpeg' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">DJEMBE</h5>
+          <p class="card-text">Free style rope,tuned djembe</p>
+          <p><strong>Rs.1,990</strong></p>
+          <p>67% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'drum2.webp' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">DRUMSET</h5>
+          <p class="card-text">Begginners Drum kit full size with cymbals</p>
+          <p><strong>Rs.34,999</strong></p>
+          <p>10% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color:rgb(164, 104, 59); ">
+        <img src="{% static 'hand2.jpeg' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">HANDPAN</h5>
+          <p class="card-text">Purple coloured hand pan drum</p>
+          <p><strong>Rs.26,999</strong></p>
+          <p>60% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'mr1.webp' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">MRIDANGAM</h5>
+          <p class="card-text">Mridangam-solid wood,brown colour</p>
+          <p><strong>Rs.7,900</strong></p>
+          <p>50% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'acc1.webp' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">ACCORDION</h5>
+          <p class="card-text">Durable 20 button accordion for beginers</p>
+          <p><strong>Rs.45,989</strong></p>
+          <p>10% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+  <div class="row mt-6">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'vio1.jpeg' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">VIOLIN</h5>
+          <p class="card-text">Handcrafted solid wood Neo violin kit</p>
+          <p><strong>Rs.3,099</strong></p>
+          <p>48% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color:rgb(164, 104, 59); ">
+        <img src="{% static 'saxo2.jpg' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">SAXOPHONE</h5>
+          <p class="card-text">Super special quality ,silver polish</p>
+          <p><strong>Rs.14,950</strong></p>
+          <p>45% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'drum1.webp' %}" class="card-img-top" alt="..." style="height:150px;width:210px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">DRUMSET</h5>
+          <p class="card-text">full size 5-piece adult drumset</p>
+          <p><strong>Rs.23,676</strong></p>
+          <p>21% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card" style="width:200px;height:400px;background-color: rgb(164, 104, 59);">
+        <img src="{% static 'harp1.jpeg' %}" class="card-img-top" alt="..." style="height:150px;width:200px;margin-top:-1px;margin-left:-1px;">
+        <div class="card-body">
+          <h5 class="card-title">HARP</h5>
+          <p class="card-text">15 string Lyre harp wooden</p>
+          <p><strong>Rs.32,599</strong></p>
+          <p>50% OFF</p>
+          <a href="http://127.0.0.1:8000/web_app/log/" class="btn btn-light">BUY</a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+
+<div class="container-fluid" style="height:300px;background-color:rgb(178, 131, 96);margin-top:10px;">
+
+  <div class="row mt-1">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div style="width:100px;height:100px;background-color:rgb(178, 131, 96);margin-top:50px;font-family:cursive;margin-left:100px;">
+        <div>
+          <h4>Rhythm</h4>
+          <p>Who we are</p>
+          <p>How to contact us</p>
+          <p>Terms & conditions</p>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div  style="width:250px;height:100px;background-color:rgb(178, 131, 96);margin-top:50px;font-family:cursive;">
+        <div>
+          <h4>Customer Services</h4>
+          <p>Track your order</p>
+          <p>Payments</p>
+          <p>Returns</p>
+          <p>Cancellations</p>
+          <p>Customer care</p>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div  style="width:100px;height:100px;background-color:rgb(178, 131, 96);margin-top:50px;font-family:cursive;">
+        <div>
+          <h4>Policy</h4>
+          <p>Return policy</p>
+          <p>Sitemap</p>
+          <p>Privacy</p>
+          <p>Security</p>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div  style="width:150px;height:100px;background-color: rgb(178, 131, 96);margin-top:50px;font-family:cursive;">
+        <div>
+          <h4>Follow Us</h4>
+          <p>Facebook</p>
+          <p>Instagram</p>
+          <p>Twitter</p>
+          <p>Pinterest</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+</div>
+
+</body>
+</html>

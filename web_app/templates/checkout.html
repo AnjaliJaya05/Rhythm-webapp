@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <style>
+             body{
+    background-image:url({% static 'sph.jpg'%});
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    height:550px;
+    margin: 10px;
+    }
+    .btn-grad {
+            background-image: linear-gradient(to right, #FFA17F 0%, #00223E  51%, #FFA17F  100%);
+            margin: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            height:20px;
+            padding-top:2px;
+            margin-left:90px;
+            width:30%;
+            padding-left:-10px;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+  </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="height:430px;width:60%;margin-left:280px;background-color:white;margin-top:50px;">
+    <img src="{% static 'Guitar1.jpeg' %}" style="float:left;height:430px;width:40%;">
+<form method="post">{% csrf_token %}
+    <center><h1 style="color:black;padding-top:10px;"><u>Checkout</u></h1></center>
+    <table align="center" height="300px" width="400px">
+         <tr>
+            <th align="left" style="color:black;"><label>Name:</label></th>
+            <td><input type="text" name="name"></td>
+        </tr>
+         <tr>
+            <th align="left" style="color:black;"><label>Address:</label></th>
+            <td><input type="text" name="address"></td>
+        </tr>
+        <tr>
+            <th align="left" style="color:black;"><label>Pincode:</label></th>
+            <td><input type="number" name="pincode"></td>
+        </tr>
+        <tr>
+            <th align="left" style="color:black;"><label>Phone Number:</label></th>
+            <td><input type="number" name="phone"></td>
+        </tr>
+          <tr>
+            <th align="left" style="color:black;"><label>price:</label></th>
+            <td><input type="text" name="pri" value="{{b.pri}}"></td>
+        </tr>
+                <tr>
+            <th align="left" style="color:black;"><label>Product Name:</label></th>
+            <td><input type="text" name="pname" value="{{b.pname}}" ></td>
+        </tr>
+        <tr>
+            <th align="left" style="color:black;"><label>Payment mode</label></th>
+            <td>
+                <select name="select">
+                    <option>Select your payment mode</option>
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                        <option value="Credit/Debit Card">Credit/Debit Card</option>
+                    </select>
+            </td>
+        </tr>
+        </table>
+        <div style="padding-left:350px;">
+            <button class="btn-grad" type="submit">Place Order</button>
+        </div>
+</form>
+</div>
+</body>
+</html>

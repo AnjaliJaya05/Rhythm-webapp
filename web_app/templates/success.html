@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+           body{
+    background-image:url({% static 'sph.jpg'%});
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    height:550px;
+    margin: 10px;
+    }
+      .btn-grad {
+            background-image: linear-gradient(to right, #52c234 0%, #061700  51%, #52c234  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+             height:30px;
+            padding-top:2px;
+            margin-left:520px;
+            width:25%;
+            padding-left:-10px;
+            padding-top:5px;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+
+    </style>
+    <script src="https://kit.fontawesome.com/39d2f692ec.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="background-color:white;height:350px;width:100%;">
+<div style="margin-left:600px;color:green;margin-top:130px;"><i class="fa-sharp fa-solid fa-circle-check fa-6x" style="margin-top:30px;"></i></div>
+<h1 style="margin-left:450px;color:black;">ORDER CONFIRMED!!!</h1>
+<h2 style="margin-left:310px;color:black;">YOU HAVE TO PAY RS.{{pri}} FOR YOUR ORDER {{pname}}</h2>
+    <button class="btn-grad" type="submit"><a href="http://127.0.0.1:8000/web_app/index1/" style="text-decoration:none;color:black;">CONTINUE TO SHOPPING....</a></button>
+</div>
+</body>
+</html>

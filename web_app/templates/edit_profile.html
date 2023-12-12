@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+                  body{
+    background-image:url({% static 'sph.jpg'%});
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    height:550px;
+    margin: 10px;
+    }
+    .btn-grad {
+            background-image: linear-gradient(to right, #FFA17F 0%, #00223E  51%, #FFA17F  100%);
+            margin: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            height:20px;
+            padding-top:2px;
+            margin-left:100px;
+            width:25%;
+            padding-right:18px;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="height:430px;width:60%;margin-left:280px;background-color:white;margin-top:50px;">
+    <img src="{% static 'Guitar1.jpeg' %}" style="float:left;height:430px;width:40%;">
+<form method="post">{% csrf_token %}
+    <center><h1 style="color:black;padding-top:10px;"><u>Edit Profile</u></h1></center>
+    <table align="center" height="300px" width="400px">
+        <tr>
+            <th align="left" style="color:black;"><label>Name:</label></th>
+            <td><input type="text" name="name"  value="{{a.name}}"></td>
+        </tr>
+        <tr>
+            <th align="left" style="color:black;"><label>Email Id:</label></th>
+            <td><input type="email" name="email" value="{{a.email}}"></td>
+        </tr>
+         <tr>
+            <th align="left" style="color:black;"><label>Address:</label></th>
+            <td><input type="text" name="address"  value="{{a.address}}"></td>
+        </tr>
+        <tr>
+            <th align="left" style="color:black;"><label>Pincode:</label></th>
+            <td><input type="number" name="pincode" value="{{a.pincode}}"></td>
+        </tr>
+        <tr>
+            <th align="left" style="color:black;"><label>Phone Number:</label></th>
+            <td><input type="number" name="phone"  value="{{a.phone}}"></td>
+        </tr>
+        </table>
+        <div style="padding-left:350px;">
+            <button class="btn-grad" type="submit">Update</button>
+        </div>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+                  body{
+    background-image:url({% static 'sph.jpg'%});
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    height:550px;
+    margin: 10px;
+    }
+    .btn-grad {
+            background-image: linear-gradient(to right, #FFA17F 0%, #00223E  51%, #FFA17F  100%);
+            margin: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            height:20px;
+            padding-top:2px;
+            margin-left:100px;
+            width:25%;
+            padding-right:18px;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="height:430px;width:60%;margin-left:280px;background-color:white;margin-top:50px;">
+    <img src="{% static 'Guitar1.jpeg' %}" style="float:left;height:430px;width:40%;">
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <center><h1 style="color:black;padding-top:10px;"><u>Edit Product</u></h1></center>
+    <table align="center" height="200px" width="400px">
+        <tr>
+            <th align="left" style="color:black;"><label>Product Image:</label></th>
+            <img src="{% static img %}" height="100px" width="100px" style="margin-left:300px;">
+            <td><input type="file" name="file"></td>
+        </tr>
+        <tr>
+            <th align="left" style="color:black;"><label>Product Name:</label></th>
+            <td><input type="text" name="pname"  value="{{a.pname}}"></td>
+        </tr>
+        <tr>
+            <th align="left" style="color:black;"><label>Product Description:</label></th>
+            <td><input type="text" name="des"  value="{{a.des}}"></td>
+        </tr>
+         <tr>
+            <th align="left" style="color:black;"><label>Product price:</label></th>
+            <td><input type="text" name="pri" value="{{a.pri}}"></td>
+        </tr>
+         <tr>
+            <th align="left" style="color:black;"><label>Offer:</label></th>
+            <td><input type="text" name="offer"  value="{{a.offer}}"></td>
+        </tr>
+        </table>
+        <div style="padding-left:350px;">
+            <button class="btn-grad" type="submit" value="update">Update</button>
+        </div>
+</form>
+</div>
+</body>
+</html>
